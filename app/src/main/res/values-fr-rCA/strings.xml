@@ -11,4 +11,9 @@
     <string name="checkbox_text">Case À Cocher</string>
     <string name="camera_button_description">camera</string>
     <string name="password_hint">mot de passe</string>
+    <string name="login_button_text">Login</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="dialog_message">Voulez-vous sortir?</string>
+    <string name="dialog_title">Sortie</string>
 </resources>
