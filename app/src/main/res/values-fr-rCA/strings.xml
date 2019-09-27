@@ -16,4 +16,5 @@
     <string name="no">Non</string>
     <string name="dialog_message">Voulez-vous sortir?</string>
     <string name="dialog_title">Sortie</string>
+    <string name="response_message">Voici ma réponse</string>
 </resources>

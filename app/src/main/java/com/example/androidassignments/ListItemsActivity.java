@@ -17,6 +17,8 @@ import android.widget.Toast;
 public class ListItemsActivity extends AppCompatActivity {
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
+    private final String LOG_KEY = getClass().getSimpleName();
+    static final String RESPONSE_DATA_KEY = ListItemsActivity.class.getName()+".RESPONSE";
     private ImageButton imageButton;
 
     @Override
@@ -45,7 +47,7 @@ public class ListItemsActivity extends AppCompatActivity {
                     .setTitle(R.string.dialog_title)
                     .setPositiveButton(R.string.yes, (dialog, id) -> {
                         Intent resultIntent = new Intent();
-                        resultIntent.putExtra("Response", "Here is my response");
+                        resultIntent.putExtra(getClass().getName()+".RESPONSE", getResources().getString(R.string.response_message));
                         setResult(Activity.RESULT_OK, resultIntent);
                         finish();
 
@@ -59,31 +61,31 @@ public class ListItemsActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        Log.i(this.getClass().getSimpleName(), "In onCreate()");
+        Log.i(LOG_KEY, "In onResume()");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.i(this.getClass().getSimpleName(), "In onCreate()");
+        Log.i(LOG_KEY, "In onStart()");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.i(this.getClass().getSimpleName(), "In onCreate()");
+        Log.i(LOG_KEY, "In onPause()");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.i(this.getClass().getSimpleName(), "In onCreate()");
+        Log.i(LOG_KEY, "In onStop()");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.i(this.getClass().getSimpleName(), "In onCreate()");
+        Log.i(LOG_KEY, "In onDestroy()");
     }
 
     @Override

@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class StartActivity extends AppCompatActivity {
+    private final String LOG_KEY = getClass().getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,41 +27,43 @@ public class StartActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        Log.i(this.getClass().getSimpleName(), "In onCreate()");
+        Log.i(LOG_KEY, "In onCreate()");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.i(this.getClass().getSimpleName(), "In onCreate()");
+        Log.i(LOG_KEY, "In onStart()");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.i(this.getClass().getSimpleName(), "In onCreate()");
+        Log.i(LOG_KEY, "In onPause()");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.i(this.getClass().getSimpleName(), "In onCreate()");
+        Log.i(LOG_KEY, "In onStop()");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.i(this.getClass().getSimpleName(), "In onCreate()");
+        Log.i(LOG_KEY, "In onDestroy()");
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == 10 && data != null){
-            Log.i(this.getClass().getSimpleName(), "Returned to StartActivity.onActivityResult");
-            String messagePassed = data.getStringExtra("Response");
-            Toast toast = Toast.makeText(this , messagePassed, Toast.LENGTH_LONG);
-            toast.show();
+            Log.i(LOG_KEY, "Returned to StartActivity.onActivityResult");
+            if(data.hasExtra(ListItemsActivity.RESPONSE_DATA_KEY)) {
+                String messagePassed = data.getStringExtra(ListItemsActivity.RESPONSE_DATA_KEY);
+                Toast toast = Toast.makeText(this, messagePassed, Toast.LENGTH_LONG);
+                toast.show();
+            }
         }
     }
 }
