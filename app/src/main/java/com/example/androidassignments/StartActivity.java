@@ -17,10 +17,21 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
         Button button = findViewById(R.id.button);
+        Button startChatButton = findViewById(R.id.start_chat);
+        Button toolBarButton = findViewById(R.id.start_test_toolbar);
         button.setOnClickListener(v -> {
-            Intent intent = new Intent(StartActivity.this, ListItemsActivity.class);
+            Intent intent = new Intent(this, ListItemsActivity.class);
             startActivityForResult(intent,10);
-
+        });
+        startChatButton.setOnClickListener(v -> {
+            Log.i(LOG_KEY, "User clicked Start Chat");
+            Intent intent = new Intent(this, ChatWindow.class);
+            startActivity(intent);
+        });
+        toolBarButton.setOnClickListener(v -> {
+            Log.i(LOG_KEY, "User clicked Test Toolbar");
+            Intent intent = new Intent(this, TestToolbar.class);
+            startActivity(intent);
         });
     }
 

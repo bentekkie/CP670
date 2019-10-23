@@ -16,4 +16,15 @@
     <string name="no">No</string>
     <string name="dialog_title">Exit</string>
     <string name="response_message">Here is my response</string>
+    <string name="start_chat_button">Start Chat</string>
+    <string name="send_button">Send</string>
+    <string name="title_activity_test_toolbar">TestToolbar</string>
+    <string name="go_back_title">Do you want to go back?</string>
+    <string name="fab_clicked_message">FAB was clicked</string>
+    <string name="one">One</string>
+    <string name="two">Two</string>
+    <string name="three">Three</string>
+    <string name="about">About</string>
+    <string name="version_text">Version 1.0, by Benjamin Segall</string>
+    <string name="new_message_hint">New Message</string>
 </resources>

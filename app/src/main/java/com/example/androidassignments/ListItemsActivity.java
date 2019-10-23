@@ -42,7 +42,7 @@ public class ListItemsActivity extends AppCompatActivity {
             toast.show();
         });
         checkBox.setOnCheckedChangeListener((cb, checked) -> {
-            AlertDialog.Builder builder = new AlertDialog.Builder(ListItemsActivity.this);
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage(R.string.dialog_message)
                     .setTitle(R.string.dialog_title)
                     .setPositiveButton(R.string.yes, (dialog, id) -> {

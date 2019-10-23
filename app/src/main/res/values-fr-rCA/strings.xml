@@ -17,4 +17,14 @@
     <string name="dialog_message">Voulez-vous sortir?</string>
     <string name="dialog_title">Sortie</string>
     <string name="response_message">Voici ma réponse</string>
+    <string name="start_chat_button">Démarrer la discussion</string>
+    <string name="send_button">Envoyer</string>
+    <string name="go_back_title">Veux-tu y retourner?</string>
+    <string name="fab_clicked_message">FAB a été cliqué</string>
+    <string name="one">Un</string>
+    <string name="two">Deux</string>
+    <string name="three">Trois</string>
+    <string name="about">À propos</string>
+    <string name="version_text">Version 1.0, de Benjamin Segall</string>
+    <string name="new_message_hint">Nouveau message</string>
 </resources>
